@@ -5,11 +5,4 @@ class Player {
         this.currentRoom = 1;
     }
 
-
-
-
-
-
-
-
 }

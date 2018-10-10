@@ -4,3 +4,5 @@ class Room {
         this.description = 'This is the first room';
     }
 }
+
+module.exports = Room;
