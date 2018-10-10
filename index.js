@@ -12,8 +12,8 @@ let userNumber = 1;
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', function(req, res){
-  console.log('wheee');
-  res.sendFile(__dirname + '/index.html');
+  console.log('Serving index.html');
+  res.sendFile(__dirname + '/public/index.html');
 });
 
 io.on('connection', function(socket){

@@ -4,5 +4,6 @@ class Player {
         this.name = name;
         this.currentRoom = 1;
     }
-
 }
+
+module.exports = Player;
