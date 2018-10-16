@@ -1,12 +1,15 @@
 let Room = require('./room');
-let Player = require('./player');
+let registeredPlayers = require('./registeredPlayers');
 
 class World {
 
     constructor() {
 
         let room = new Room();
-        let player = new Player(1, 'Mitch');
+
+        let playerIndex = Math.floor(Math.random() * registeredPlayers.length);
+
+        let player = registeredPlayers.find(x => x.id === playerIndex);
 
         room.players.push(player);
         this.rooms = [room];
