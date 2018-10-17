@@ -7,17 +7,17 @@ class World {
 
         let room = new Room();
 
+        // Get random player for now
         let playerIndex = Math.floor(Math.random() * registeredPlayers.length);
+        this.player = registeredPlayers.find(x => x.id === playerIndex);
 
-        let player = registeredPlayers.find(x => x.id === playerIndex);
-
-        room.players.push(player);
+        room.addPlayer(this.player);
         this.rooms = [room];
 
     }
 
     serve() {
-        return this.rooms[0].players[0].name + ' ' + this.rooms[0].description;
+        return this.rooms[0].render();
     }
 }
 

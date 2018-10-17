@@ -1,9 +1,9 @@
-let Player = require('./player');
+let Character = require('./character');
 
-let players = [
-    new Player(1, 'Mitch'),
-    new Player(2, 'Not Mitch'),
-    new Player(3, 'Mitch Please')
+let characters = [
+    new Character(1, 'Mitch'),
+    new Character(2, 'Not Mitch'),
+    new Character(3, 'Mitch Please')
 ];
 
-module.exports = players;
+module.exports = characters;
