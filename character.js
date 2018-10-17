@@ -1,8 +1,8 @@
 class Character {
-    constructor(id, name) {
+    constructor(id, name, currentRoom) {
         this.id = id;
         this.name = name;
-        this.currentRoom = 1;
+        this.currentRoom = currentRoom;
     }
 }
 

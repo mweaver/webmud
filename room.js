@@ -1,14 +1,15 @@
 class Room {
 
-    constructor() {
-        this.id = 1;
+    constructor(id, movementPaths) {
+        this.id = id;
         this.title = 'The First Room';
         this.description = 'This is the first room.  There are many like it, but this one is mine.  You also see...';
         this.characters = [];
+        this.movementPaths = movementPaths;
     }
 
-    addPlayer(player) {
-        this.characters.push(player);
+    addCharacter(character) {
+        this.characters.push(character);
     }
 
     render() {
