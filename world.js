@@ -9,11 +9,15 @@ class World {
         let room2 = new Room(2, { w: 1 });
 
         // Get random character for now
-        let characterIndex = Math.floor(Math.random() * characters.length);
-        this.character = characters.find(x => x.id === characterIndex);
+        // let characterIndex = Math.floor(Math.random() * characters.length);
+        this.character = characters.find(x => x.id === 1);
+        let anotherCharacter = characters.find(x => x.id === 2);
 
-        room1.addCharacter(this.character);
         this.rooms = [room1, room2];
+
+        this.character.move(room1);
+
+        console.log(room1);
 
     }
 

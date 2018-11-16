@@ -1,9 +1,9 @@
 class Room {
 
-    constructor(id, movementPaths) {
+    constructor({id = -1, title = '', description = '', movementPaths = []}) {
         this.id = id;
-        this.title = 'The First Room';
-        this.description = 'This is the first room.  There are many like it, but this one is mine.  You also see...';
+        this.title = title;
+        this.description = description;
         this.characters = [];
         this.movementPaths = movementPaths;
     }
