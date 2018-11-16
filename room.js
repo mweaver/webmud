@@ -1,6 +1,6 @@
 class Room {
 
-    constructor({id = -1, title = '', description = '', movementPaths = []}) {
+    constructor({id = -1, title = '', description = '', movementPaths = {}}) {
         this.id = id;
         this.title = title;
         this.description = description;

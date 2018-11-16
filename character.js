@@ -1,3 +1,5 @@
+let roomRegistry = require('./roomRegistry');
+
 class Character {
     constructor(id, name) {
         this.id = id;
@@ -6,10 +8,11 @@ class Character {
     }
 
     look() {
-        return this.currentRoom.description;
+        return this.currentRoom.render();
     }
 
-    move(room) {
+    move(id) {
+        let room = roomRegistry.find(room => room.id === id);
         this.currentRoom = room;
         room.addCharacter(this);
         this.look();
